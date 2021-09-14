@@ -214,10 +214,6 @@ body {
 
 	/* Research tool */
 
-	.researchTool {
-		margin-top: 2rem;
-	}
-
 	.researchTool__input {
 		width: unset;
 	}
