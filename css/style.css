@@ -5,6 +5,7 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -227,14 +228,9 @@ body {
 
 	.researchTool__submit--mobile {
 		display: unset;
-		-webkit-tap-highlight-color: transparent;
 	}
 
 	/* Filter tool */
-
-	.filter {
-		-webkit-tap-highlight-color: transparent;
-	}
 
 	.filter:hover {
 		background-color: unset;
