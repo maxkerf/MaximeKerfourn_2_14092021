@@ -15,6 +15,9 @@ body {
 
 .tools {
 	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .tools__title {
@@ -32,6 +35,7 @@ body {
 	margin-top: 1rem;
 	display: flex;
 	height: 45px;
+	position: relative;
 }
 
 .researchTool__icon {
@@ -43,13 +47,12 @@ body {
 }
 
 .researchTool__input {
-	width: 200px;
+	width: 325px;
 	padding: 0 1rem;
 	font-size: 1rem;
 	font-weight: 700;
 	border: 1px solid #f2f2f2;
-	border-right: none;
-	border-left: none;
+	border-radius: 0 1rem 1rem 0;
 	outline: none;
 }
 
@@ -61,14 +64,25 @@ body {
 	padding: 0 1rem;
 	font-size: 1rem;
 	border: none;
-	border-radius: 0 1rem 1rem 0;
+	border-radius: 1rem;
 	background-color: #0065fc;
 	color: #fff;
+	position: absolute;
+	height: 100%;
+	right: 0;
 }
 
 .researchTool__submit:hover {
 	cursor: pointer;
 	box-shadow: 0 0 0.25rem #0065fc;
+}
+
+.researchTool__submit--desktop {
+	border-radius: 0 1rem 1rem 0;
+}
+
+.researchTool__submit--mobile {
+	display: none;
 }
 
 /* Filter tool */
@@ -145,7 +159,8 @@ body {
 }
 
 .lodgingsInfo__content {
-	padding-top: 3px;
+	padding-top: 0.25rem;
+	font-size: 0.875rem;
 }
 
 /* Footer */
@@ -190,8 +205,54 @@ body {
 /* Mobile */
 
 @media screen and (max-width: 600px) {
+	/* Tools */
+
+	.tools {
+		padding: 1rem;
+	}
+
+	/* Research tool */
+
+	.researchTool {
+		margin-top: 2rem;
+	}
+
+	.researchTool__input {
+		width: unset;
+	}
+
+	.researchTool__submit--desktop {
+		display: none;
+	}
+
+	.researchTool__submit--mobile {
+		display: unset;
+	}
+
+	/* Filter tool */
+
+	.filter {
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	.filter:hover {
+		background-color: unset;
+	}
+
+	.filter:active {
+		background-color: #f2f2f2;
+	}
+
+	.filter__content {
+		font-size: 0.875rem;
+		padding: 0 0.75rem 0 2.75rem;
+	}
+
+	/* Footer */
+
 	.footer {
 		flex-direction: column;
+		padding: 1rem;
 	}
 
 	.footerInfo {
