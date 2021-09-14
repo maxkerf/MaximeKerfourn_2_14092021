@@ -227,7 +227,7 @@ body {
 
 	.researchTool__submit--mobile {
 		display: unset;
-		outline: none;
+		-webkit-tap-highlight-color: transparent;
 	}
 
 	/* Filter tool */
