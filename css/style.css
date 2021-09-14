@@ -47,3 +47,17 @@ body {
 .information__link a:hover {
 	color: #0065fc;
 }
+
+/* Responsive */
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+	.footer {
+		flex-direction: column;
+	}
+
+	.information {
+		margin: 0.75rem 0;
+	}
+}
