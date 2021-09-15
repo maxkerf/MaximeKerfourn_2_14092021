@@ -13,10 +13,16 @@ body {
 	font-family: "Raleway", sans-serif;
 }
 
+a {
+	text-decoration: none;
+	color: unset;
+}
+
 /* Tools */
 
 .tools {
-	padding: 2rem;
+	padding: 0 2rem;
+	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -93,10 +99,10 @@ body {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
 }
 
 .filterTool__title {
-	margin-right: 1rem;
 	font-size: 1rem;
 }
 
@@ -104,11 +110,11 @@ body {
 	display: flex;
 	font-weight: 700;
 	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .filter {
 	height: 2.5rem;
-	margin: 0.5rem 1rem 0.5rem 0;
 	border-radius: 1.25rem;
 	position: relative;
 }
@@ -164,6 +170,153 @@ body {
 	font-size: 0.875rem;
 }
 
+/* Lodging */
+
+.lodgingPart {
+	padding: 0 2rem;
+	margin-top: 2rem;
+	display: flex;
+	gap: 2rem;
+}
+
+.localLodgings {
+	background-color: #f2f2f2;
+	padding: 2.5rem;
+	border-radius: 1rem;
+	max-width: 862px;
+}
+
+.localLodgings__title {
+	font-size: 1.25rem;
+}
+
+.lodgings {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.lodgings a {
+	border-radius: 1.5rem;
+}
+
+.lodgings a:hover {
+	box-shadow: 0 0 0 2px #0065fc;
+}
+
+.lodging {
+	background-color: #fff;
+	border: 5px solid #fff;
+	border-radius: inherit;
+	box-shadow: 0 0 5px #d9d9d9;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+}
+
+.lodging__image {
+	height: 115px;
+}
+
+.lodging__image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.lodgingContent {
+	padding: 0.5rem;
+	padding-left: 0.75rem;
+	position: relative;
+}
+
+.lodging__title {
+	font-size: 1rem;
+}
+
+.lodging__description {
+	margin-top: 0.25rem;
+	font-size: 0.875rem;
+}
+
+.lodging__description .lowPrice {
+	font-weight: bold;
+}
+
+.lodgingRate {
+	margin-top: 0.5rem;
+	display: flex;
+}
+
+.lodging__star {
+	font-size: 0.75rem;
+	color: #0065fc;
+}
+
+.lodging__star--empty {
+	color: #d9d9d9;
+}
+
+.btn {
+	border: none;
+	padding: 0;
+	margin-top: 2rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.btn:hover {
+	cursor: pointer;
+	color: #0065fc;
+}
+
+.popularLodgings {
+	background-color: #f2f2f2;
+	padding: 2.5rem;
+	border-radius: 1rem;
+	max-width: 400px;
+}
+
+.popularLodgings__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.popularLodgings__title h2 {
+	font-size: 1.25rem;
+	white-space: nowrap;
+}
+
+.popularLodgings__title i {
+	font-size: 1.25rem;
+}
+
+.lodgings--popular {
+	gap: 2rem;
+}
+
+.lodging--popular {
+	flex-direction: row;
+	width: 320px;
+}
+
+.lodging__image--popular {
+	height: 125px;
+	flex: 2;
+}
+
+.lodgingContent--popular {
+	flex: 3;
+}
+
+.lodgingRate--popular {
+	position: absolute;
+	bottom: 0.5rem;
+}
+
 /* Footer */
 
 .footer {
@@ -171,6 +324,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 2rem;
+	margin-top: 2rem;
 }
 
 .footerInfo {
@@ -190,11 +344,6 @@ body {
 .footerInfo__link {
 	margin-top: 0.5rem;
 	font-size: 0.875rem;
-}
-
-.footerInfo__link a {
-	text-decoration: none;
-	color: #000;
 }
 
 .footerInfo__link a:hover {
@@ -239,6 +388,12 @@ body {
 	.filter__content {
 		font-size: 0.875rem;
 		padding: 0 0.75rem 0 2.75rem;
+	}
+
+	/* Lodging */
+
+	.lodgingPart {
+		flex-direction: column-reverse;
 	}
 
 	/* Footer */
