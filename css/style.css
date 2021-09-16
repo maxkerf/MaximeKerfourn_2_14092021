@@ -355,11 +355,11 @@ h3 {
 
 	.localLodgings {
 		max-width: 18rem;
-		padding: 2rem 1rem;
+		padding: 1.25rem;
 	}
 
 	.popularLodgings {
-		padding: 2rem 1rem;
+		padding: 1.25rem;
 	}
 
 	.lodgings {
@@ -382,6 +382,7 @@ h3 {
 	.lodgingPart {
 		flex-direction: column-reverse;
 		align-items: center;
+		gap: 1.5rem;
 	}
 }
 
@@ -424,6 +425,7 @@ h3 {
 	}
 
 	.popularLodgings {
+		padding: 2rem 1rem;
 		border-radius: unset;
 		max-width: none;
 	}
