@@ -193,6 +193,12 @@ h3 {
 	max-width: 48rem;
 }
 
+.localLodgings__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 .lodgings {
 	margin-top: 1.5rem;
 	display: flex;
@@ -336,23 +342,50 @@ h3 {
 
 /* Responsive */
 
-/* Local lodgings part */
-
 @media screen and (max-width: 1200px) {
+	/* Lodging */
+
 	.localLodgings {
 		max-width: 33rem; /* don't forget gap */
 	}
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 960px) {
+	/* Lodging */
+
 	.localLodgings {
 		max-width: 18rem;
+		padding: 2rem 1rem;
+	}
+
+	.popularLodgings {
+		padding: 2rem 1rem;
+	}
+
+	.lodgings {
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.lodgings > * {
+		width: 100%;
+	}
+
+	.lodging {
+		width: 100%;
 	}
 }
 
-/* Mobile */
+@media screen and (max-width: 720px) {
+	/* Lodging */
 
-@media screen and (max-width: 600px) {
+	.lodgingPart {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
 	/* Tools */
 
 	.tools {
@@ -381,7 +414,6 @@ h3 {
 	/* Lodging */
 
 	.lodgingPart {
-		flex-direction: column-reverse;
 		padding: 0;
 	}
 
@@ -391,23 +423,9 @@ h3 {
 		padding: 0 1rem;
 	}
 
-	.lodgings {
-		gap: 0.75rem;
-		margin-top: 1rem;
-	}
-
-	.lodgings > * {
-		width: 100%;
-	}
-
-	.lodging {
-		width: 100%;
-	}
-
 	.popularLodgings {
-		max-width: none;
-		padding: 2rem 1rem;
 		border-radius: unset;
+		max-width: none;
 	}
 
 	/* Footer */
