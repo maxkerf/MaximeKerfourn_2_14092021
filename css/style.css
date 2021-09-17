@@ -18,6 +18,12 @@ a {
 	color: unset;
 }
 
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
 h1 {
 	font-size: 1.125rem;
 }
@@ -175,9 +181,9 @@ h3 {
 	font-size: 0.75rem;
 }
 
-/* Lodging */
+/* Lodgings */
 
-.lodgingPart {
+.lodgings {
 	padding: 0 2rem;
 	margin-top: 2rem;
 	display: flex;
@@ -186,20 +192,26 @@ h3 {
 	align-items: flex-start;
 }
 
-.localLodgings {
+.lodging {
 	background-color: #f2f2f2;
 	padding: 2rem;
 	border-radius: 1rem;
 	max-width: 48rem;
 }
 
-.localLodgings__title {
+.lodging--popular {
+	max-width: 21.5rem;
+}
+
+.lodging__title {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.lodgings {
+/* Lodging cards */
+
+.lodgingCards {
 	margin-top: 1.5rem;
 	display: flex;
 	flex-wrap: wrap;
@@ -207,15 +219,13 @@ h3 {
 	justify-content: space-between;
 }
 
-.lodgings a {
+.lodgingCards > * {
 	border-radius: 1.25rem;
 }
 
-.lodgings a:hover {
-	box-shadow: 0 0 0 2px #0065fc;
-}
+/* Lodging card */
 
-.lodging {
+.lodgingCard {
 	background-color: #fff;
 	border: 5px solid #fff;
 	border-radius: inherit;
@@ -224,46 +234,69 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	width: 14rem;
+	height: 11rem;
 }
 
-.lodging__image {
-	height: 6.25rem;
+.lodgingCard:hover {
+	background-color: #deebff;
+	border-color: #deebff;
+	box-shadow: 0 0 3px #0065fc;
 }
 
-.lodging__image img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
+.lodgingCard--popular {
+	flex-direction: row;
+	width: 17.5rem;
+	height: 7.5rem;
 }
 
-.lodgingContent {
-	padding: 0.5rem;
-	padding-left: 0.75rem;
+/* Lodging card image */
+
+.lodgingCard__image {
+	overflow: hidden;
+}
+
+.lodgingCard__image--popular {
+	flex: 2;
+}
+
+/* Lodging card content */
+
+.lodgingCard > .content {
+	margin: 0.5rem;
+	margin-left: 0.75rem;
 	position: relative;
 }
 
-.lodging__description {
+.lodgingCard--popular > .content {
+	flex: 3;
+}
+
+.lodgingCard__description {
 	margin-top: 0.375rem;
 	font-size: 0.75rem;
 }
 
-.lodging__description .lowPrice {
+.lodgingCard__description .lowPrice {
 	font-weight: bold;
 }
 
-.lodgingRate {
+.lodgingCard__rate {
 	margin-top: 0.5rem;
 	display: flex;
-}
-
-.lodging__star {
 	font-size: 0.75rem;
 	color: #0065fc;
 }
 
-.lodging__star--empty {
+.lodgingCard__rate > .empty {
 	color: #d9d9d9;
 }
+
+.lodgingCard__rate--popular {
+	position: absolute;
+	bottom: 0;
+}
+
+/* Button */
 
 .btn {
 	border: none;
@@ -277,38 +310,6 @@ h3 {
 .btn:hover {
 	cursor: pointer;
 	color: #0065fc;
-}
-
-.popularLodgings {
-	background-color: #f2f2f2;
-	padding: 2rem;
-	border-radius: 1rem;
-	max-width: 21.5rem;
-}
-
-.popularLodgings__title {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.lodging--popular {
-	flex-direction: row;
-	width: 17.5rem;
-}
-
-.lodging__image--popular {
-	height: 7rem;
-	flex: 2;
-}
-
-.lodgingContent--popular {
-	flex: 3;
-}
-
-.lodgingRate--popular {
-	position: absolute;
-	bottom: 0.5rem;
 }
 
 /* Footer */
@@ -343,43 +344,42 @@ h3 {
 /* Responsive */
 
 @media screen and (max-width: 1200px) {
-	/* Lodging */
+	/* Lodgings */
 
-	.localLodgings {
+	.lodging--local {
 		max-width: 33rem; /* don't forget gap */
 	}
 }
 
 @media screen and (max-width: 960px) {
-	/* Lodging */
+	/* Lodgings */
 
-	.localLodgings {
+	.lodging {
+		padding: 1.25rem;
+	}
+
+	.lodging--local {
 		max-width: 18rem;
-		padding: 1.25rem;
 	}
 
-	.popularLodgings {
-		padding: 1.25rem;
-	}
-
-	.lodgings {
+	.lodgingCards {
 		gap: 0.75rem;
 		margin-top: 1rem;
 	}
 
-	.lodgings > * {
+	.lodgingCards > * {
 		width: 100%;
 	}
 
-	.lodging {
+	.lodgingCard {
 		width: 100%;
 	}
 }
 
 @media screen and (max-width: 720px) {
-	/* Lodging */
+	/* Lodgings */
 
-	.lodgingPart {
+	.lodgings {
 		flex-direction: column-reverse;
 		align-items: center;
 		gap: 1.5rem;
@@ -412,22 +412,24 @@ h3 {
 		display: unset;
 	}
 
-	/* Lodging */
+	/* Lodgings */
 
-	.lodgingPart {
+	.lodgings {
 		padding: 0;
 	}
 
-	.localLodgings {
+	.lodging {
 		max-width: none;
+	}
+
+	.lodging--local {
 		background-color: unset;
 		padding: 0 1rem;
 	}
 
-	.popularLodgings {
+	.lodging--popular {
 		padding: 2rem 1rem;
 		border-radius: unset;
-		max-width: none;
 	}
 
 	/* Footer */
