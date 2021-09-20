@@ -10,6 +10,17 @@
 		<link rel="stylesheet" href="./css/all.css" />
 	</head>
 	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="header__logo">
+				<a href=""><img src="./images/logo/Reservia@3x.png" alt="Logo" /></a>
+			</div>
+			<nav class="nav">
+				<a class="nav__link nav__link--active" href="#lodgings">Hébergements</a>
+				<a class="nav__link" href="#activity">Activités</a>
+			</nav>
+			<button class="btn btn--blue">S'inscrire</button>
+		</header>
 		<!-- Main -->
 		<main>
 			<!-- Tools -->
@@ -84,7 +95,7 @@
 				</div>
 			</div>
 			<!-- Lodgings -->
-			<div class="lodgings">
+			<div id="lodgings" class="lodgings">
 				<!-- Local lodgings -->
 				<section class="lodging lodging--local">
 					<div class="lodging__title">
@@ -324,7 +335,7 @@
 				</aside>
 			</div>
 			<!-- Activity -->
-			<div class="activity">
+			<div id="activity" class="activity">
 				<h2>Activités à Marseille</h2>
 				<section class="activityCards">
 					<a href="">
