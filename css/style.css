@@ -404,11 +404,22 @@ h3 {
 
 /* Responsive */
 
+@media screen and (max-width: 1200px) {
+	.lodging {
+		flex: 2;
+	}
+
+	.lodging--popular {
+		flex: 1;
+	}
+}
+
 @media screen and (max-width: 960px) {
 	/* Lodgings */
 
 	.lodging {
 		padding: 1.25rem;
+		flex: 1;
 	}
 
 	.lodgingCards {
