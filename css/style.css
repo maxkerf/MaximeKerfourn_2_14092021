@@ -188,20 +188,20 @@ h3 {
 	padding: 0 2rem;
 	margin-top: 2rem;
 	display: flex;
-	gap: 0.5rem;
-	justify-content: space-evenly;
-	align-items: flex-start;
+	flex-wrap: wrap-reverse;
+	align-items: flex-end;
+	gap: 1.5rem;
 }
 
 .lodging {
 	background-color: #f2f2f2;
 	padding: 2rem;
 	border-radius: 1rem;
-	max-width: 48rem;
+	flex: 5;
 }
 
 .lodging--popular {
-	max-width: 21.5rem;
+	flex: 2;
 }
 
 .lodging__title {
@@ -217,11 +217,11 @@ h3 {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem 1rem;
-	justify-content: space-between;
 }
 
 .lodgingCards > * {
 	border-radius: 1.25rem;
+	flex: 1;
 }
 
 /* Lodging card */
@@ -234,7 +234,7 @@ h3 {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	width: 14rem;
+	min-width: 14rem;
 	height: 11rem;
 }
 
@@ -246,7 +246,7 @@ h3 {
 
 .lodgingCard--popular {
 	flex-direction: row;
-	width: 17.5rem;
+	min-width: 17.5rem;
 	height: 7.5rem;
 }
 
@@ -349,11 +349,9 @@ h3 {
 }
 
 .activityCard {
-	/* height: 100%; */
 	min-height: 11rem;
 	display: flex;
 	flex-direction: column;
-	/* border-radius: inherit; */
 	overflow: hidden;
 	box-shadow: 0 5px 10px #d9d9d9;
 }
@@ -406,14 +404,6 @@ h3 {
 
 /* Responsive */
 
-@media screen and (max-width: 1200px) {
-	/* Lodgings */
-
-	.lodging--local {
-		max-width: 33rem; /* don't forget gap */
-	}
-}
-
 @media screen and (max-width: 960px) {
 	/* Lodgings */
 
@@ -421,21 +411,9 @@ h3 {
 		padding: 1.25rem;
 	}
 
-	.lodging--local {
-		max-width: 18rem;
-	}
-
 	.lodgingCards {
 		gap: 0.75rem;
 		margin-top: 1rem;
-	}
-
-	.lodgingCards > * {
-		width: 100%;
-	}
-
-	.lodgingCard {
-		width: 100%;
 	}
 
 	/* Activity */
@@ -447,13 +425,6 @@ h3 {
 }
 
 @media screen and (max-width: 720px) {
-	/* Lodgings */
-
-	.lodgings {
-		flex-direction: column-reverse;
-		gap: 1.5rem;
-	}
-
 	/* Activity */
 
 	.activityCards {
@@ -500,20 +471,31 @@ h3 {
 
 	.lodgings {
 		padding: 0;
+		flex-direction: column-reverse;
+		flex-wrap: unset;
+		align-items: unset;
 	}
 
 	.lodging {
-		max-width: none;
+		border-radius: unset;
 	}
 
 	.lodging--local {
-		background-color: unset;
 		padding: 0 1rem;
+		background-color: unset;
 	}
 
 	.lodging--popular {
 		padding: 2rem 1rem;
-		border-radius: unset;
+	}
+
+	.lodgingCards > * {
+		width: 100%;
+		flex: unset;
+	}
+
+	.lodgingCard {
+		min-width: unset;
 	}
 
 	/* Activity */
