@@ -42,7 +42,6 @@ h3 {
 .header {
 	padding: 0 2rem;
 	display: flex;
-	justify-content: space-between;
 	align-items: flex-end;
 	gap: 1rem;
 	flex-wrap: wrap;
@@ -50,11 +49,6 @@ h3 {
 
 .header__logo {
 	height: 2.5rem;
-	min-width: max-content;
-}
-
-.header__logo img {
-	object-fit: unset;
 }
 
 /* Navigation */
@@ -225,7 +219,7 @@ h3 {
 
 .lodgings {
 	padding: 0 2rem;
-	padding-top: 1rem;
+	padding-top: 1.5rem;
 	margin-top: 1rem;
 	display: flex;
 	flex-wrap: wrap-reverse;
@@ -368,7 +362,7 @@ h3 {
 
 .activity {
 	padding: 0 2rem;
-	padding-top: 1rem;
+	padding-top: 1.5rem;
 	margin-top: 1rem;
 }
 
@@ -511,8 +505,9 @@ h3 {
 
 	.header {
 		align-items: center;
+		justify-content: space-between;
 		padding: 0;
-		padding-top: 1.5rem;
+		margin-top: 1.5rem;
 	}
 
 	.header__logo {
@@ -541,7 +536,7 @@ h3 {
 
 	.nav__link--active {
 		border-top: unset;
-		border-bottom: 2px solid #0065fc;
+		border-bottom-color: #0065fc;
 	}
 
 	/* Tools */
@@ -572,6 +567,7 @@ h3 {
 	/* Lodgings */
 
 	.lodgings {
+		margin-top: 2rem;
 		padding: 0;
 		flex-direction: column-reverse;
 		flex-wrap: unset;
@@ -588,7 +584,7 @@ h3 {
 	}
 
 	.lodging--popular {
-		padding: 2rem 1rem;
+		padding: 1.5rem 1rem;
 	}
 
 	.lodgingCards > * {
@@ -604,6 +600,7 @@ h3 {
 
 	.activity {
 		padding: 0 1rem;
+		padding-top: 1.5rem;
 	}
 
 	.activityCards {
