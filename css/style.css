@@ -51,6 +51,10 @@ h3 {
 	height: 2.5rem;
 }
 
+.header__logo img {
+	object-fit: contain;
+}
+
 /* Navigation */
 
 .nav {
