@@ -16,6 +16,7 @@ body {
 a {
 	text-decoration: none;
 	color: unset;
+	cursor: pointer;
 }
 
 img {
@@ -71,11 +72,12 @@ h3 {
 .nav__link {
 	padding: 3rem 1rem 0 1rem;
 	font-size: 0.875rem;
+	border-top: 2px solid transparent;
 }
 
-.nav__link--active {
+.nav__link:hover {
 	color: #0065fc;
-	border-top: 2px solid #0065fc;
+	border-top-color: #0065fc;
 }
 
 /* Tools */
@@ -540,10 +542,10 @@ h3 {
 		padding-top: unset;
 		padding-bottom: 0.5rem;
 		border-bottom: 2px solid #f2f2f2;
+		border-top: unset;
 	}
 
-	.nav__link--active {
-		border-top: unset;
+	.nav__link:hover {
 		border-bottom-color: #0065fc;
 	}
 
