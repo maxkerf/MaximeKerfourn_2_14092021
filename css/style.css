@@ -48,12 +48,10 @@ h3 {
 	flex-wrap: wrap;
 }
 
-.header > * {
-	flex: 0 0 auto;
-}
-
 .header__logo {
+	flex: 1;
 	height: 2.5rem;
+	display: flex;
 }
 
 .header__logo img {
@@ -63,10 +61,7 @@ h3 {
 /* Navigation */
 
 .nav {
-	flex: 1 0 auto;
 	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
 }
 
 .nav__link {
@@ -515,7 +510,6 @@ h3 {
 
 	.header {
 		align-items: center;
-		justify-content: space-between;
 		padding: 0;
 		margin-top: 1.5rem;
 	}
@@ -534,15 +528,14 @@ h3 {
 		order: 1;
 		flex: 100%;
 		text-align: center;
-		align-items: flex-start;
 	}
 
 	.nav__link {
 		flex: 1;
 		padding-top: unset;
 		padding-bottom: 0.5rem;
-		border-bottom: 2px solid #f2f2f2;
 		border-top: unset;
+		border-bottom: 2px solid #f2f2f2;
 	}
 
 	.nav__link:hover {
